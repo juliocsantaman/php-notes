@@ -1,0 +1,12 @@
+.pagination-design {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination-design:hover {
+    background: #EEEEEE;
+    color: #000;
+}

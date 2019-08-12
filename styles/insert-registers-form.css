@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    color: #00f;
+    border-bottom: dotted #0000ff;
+    width: 50%;
+    margin: auto;
+}
+
+table {
+    border: 1px solid #f00;
+    padding: 20px 50px;
+    margin-top: 50px;
+}
+
+body {
+    background-color: #ffc;
+}
+

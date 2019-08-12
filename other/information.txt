@@ -1,0 +1,387 @@
+/******************************PHP********************************************************************/
+print es una funci�n.
+echo es una expresi�n.
+
+con echo podemos imprimir varias variables y separandolas con coma pero con print esto no es posible.
+print devuelve como valor el n�mero 1.
+print se demora m�s tiempo en imprimir en pantalla porque tiene que devolver un valor que es el n�mero 1.
+echo es el m�s utilizado.
+
+/*
+FRASE: PROGRAMAS DE JUGUETES. JAJAJAJA xD
+*/
+
+Puedes tener varios bloques de php en una p�gina web.
+
+REQUIRE  = el archivo es requerido para el funcionamiento del c�digo. Si el archivo no se encuentra el programa se rompe en la l�nea donde se encuentra el require.
+INCLUDE = si el archivo no existe, no importa el programa sigue ejecutando las dem�s instrucciones pero obviamente tambi�n aparece el error de que el archivo no existe.
+
+Variables est�ticas mantienen su valor a�n cuando salen de su �mbito, por ejemplo en una funci�n cuando tenemos un contador.
+
+static $counter=0;
+
+strcmp = compara dos strings, tomando en cuenta may�sculas y min�sculas.
+strcasecmp = compara dos strings, sin tomar en cuenta may�sculas y min�sculas.
+
+Devuelve un CERO si los dos strings son iguales.
+Devuelve un UNO si los dos strings son diferentes.
+Devuelve -1 si los dos strings son diferentes (creo que en cuestion de letra ejemplo J es diferente de j => Juuzoujs != juuzoujs).
+0         - si las dos cadenas son iguales
+<0       - si string1 es menor que string2
+> 0      - si string1 es mayor que string2
+
+
+/*********************** DIFERENCIAS GET Y POST ************************************************/
+Método HTTP GET. Información se envía de forma visible (enviado a tráves de la url).
+Método HTTP POST. Información se envía de forma no visible (enviado a través del body)
+
+
+GET = cuando no trabajemos con información sensible y sean pocos parámetros a enviar por la URL
+a otra página.
+
+POST = cuando trabajemos con información sensible o sea demasiada información que se va 
+a enviar a otra página. También cuando subamos una imagen al BBDD.
+
+$_POST => es una variable superglobal..
+isset($_POST[''send'']) => para saber si el boton SUBMIT ha sido clickeado (true or false).
+Definir una constante es con => define("NOMBRE DE LA CONSTANTE", VALOR, true or false dependiendo si queremos que sea sensible a mayusculas ser�a true. VALOR OPCIONAL).
+/********************************************************************************************/
+
+
+Cuando estamos buscando una funci�n en la documentaci�n, algunas tienen argumentos opcionales y otras tienen que llevar el argumento.
+Sabemos que son opcionales porque al inicio y al final llevan corchetes. Los que son obligatorios no tienen corchetes.
+
+Para identificar los input en un formulario es por medio del atributo NAME.
+
+continue; => hace que la siguiente l�nea de c�digo no se ejecute, esto lo usamos en un bucle for cuando se hace la divisi�n entre cero. Con esto se ignora esa divisi�n.
+
+strtolower => convierte todas las letras en min�sculas.
+strtoupper => convierte todas las letras en may�sculas.
+ucwords => convierte la primera letra de todas las palabras en may�sculas.
+
+Par�metro por defecto => es cuando declaramos un par�metro y le ponemos un valor inicial. Ejemplo: $num = 10;
+Esto quiere decir que cuando ejecutemos la funci�n si no le pasamos el par�metro va a funcionar correctamente porque nosotros le hemos puesto un valor por defecto.
+Nosotros podemos pasarle un valor si as� lo deseamos, esto cambia el valor del par�metro pero sigue teniendo el mismo funcionamiento.
+
+Par�metros por valor => como lo hacemos normalmente.
+Par�metros por referencia => quiere decir que la variable que le estamos pasando como par�metro por referencia va a tener una conexi�n con la funci�n, por lo tanto, si cambia algo el valor de ese par�metro en la funci�n, se ve reflejado en el valor como variable.
+
+CLASE
+Modelo donde se redactan las caracter�sticas comunes de un grupo de objetos.
+
+INSTANCIA
+Ejemplar perteneciente a una clase. En otras palabras es la l�nea de c�digo que crea al objeto de tal clase.
+
+OBJETO
+Tiene propiedades/caracter�sticas y m�todos. Los m�todos son las acciones que puede realizar ese objeto de tal clase.
+
+MODIFICADORES DE ACCESO
+
+PUBLIC => Accesible desde cualquier parte.
+PRIVATE => Accesible desde la propia clase.
+PROTECTED => Accesible desde la propia clase y clases heredadas.
+
+$this => hace referencia al objeto que estemos creando en cada momento.
+self:: => hace referencia a un campo/variable est�tica.
+
+La forma normal de llamar métodos y variables es $objeto->metodo();
+$objeto->variable;
+Pero si ese método o bariable es estático el llamado de hace con los dos puntitos. Clase::metodo();
+
+Una variable est�tica comparte su valor en todos los objetos existentes. Solo puede ser accesible desde la clase. Si lo comparamos con una variable normal, en esta el valor solo se le da al objeto que lo vaya a usar.
+
+Tenemos dos tipos de Arrays: Array Indexado y Array Asociativo.
+NOTA: Los Arrays en PHP te permiten almacenar datos de diferentes tipos de datos (int, string, float, date, etc). En otros lenguajes no es as�, solo te permiten almacenar datos de un mismo tipo de dato.
+
+Para recorrer un Array Indexado es con el bucle "for".
+Para recorrer un Array Asociativo es con el bucle "foreach".	
+
+/***********************************************************************************************************************************************************************************************************************/
+
+/*********************************MYSQL************************************************************************/
+
+�Qu� es MYSQL?
+R= Gestor de BBDD relacional, multihilo y multiusuario.
+
+Relacional= una base de datos relacional es cuando la informaci�n est� relacionada. Est� formada por varias tablas en las cuales la informaci�n de una u otra forma est� relacionada.
+
+Multihilo= quiere decir que la base de datos soporta varios procesos a la vez, varios hilos de ejecuci�n a la vez. 
+Quiere decir que nosotros podemos realizar varias peticiones de informaci�n a esa base de datos de forma simultanea, podemos realizar varias consultas  a la base de datos de forma simultanea.
+
+Multiusuario= quiere decir que en esa base de datos pueden haber varios usuarios conectados simultaneamente y trabajando sobre la base de datos, o bien, pidiendo informaci�n o modificando la base de datos.
+
+/***************************COMANDOS SQL**************************************************************************/
+CREATE DATABASE <NOMBRE>; => crear una base de datos por consola.
+DROP DATABASE <NOMBRE>; => borrar una base de datos por consola.
+SHOW DATABASES; => mostrar el nombre de todas las bases de datos existentes.
+USE <NOMBRE DE BBDD>; => indicar que vamos a usar la BBDD mencionada.
+CREATE TABLE <NOMBRE> ( NOMBRE_CAMPO TIPO DE DATO(), NOMBRE_CAMPO TIPO DE DATO(), ETC.) ;
+DROP TABLE <NOMBRE_TABLA>;
+ALTER TABLE <NOMBRE_TABLA> DROP <NOMBRE_CAMPO>;
+ALTER TABLE <NOMBRE_TABLA> ADD COLUMN <NOMBRE_CAMPO> <TIPO_DATO LONGITUD>;
+INSERT INTO <NOMBRE_TABLA> (CAMPOS_UTILIZAR) VALUES (VALORES_CADA_CAMPO);
+SELECT * FROM <NOMBRE_TABLA>
+SELECT * FROM <NOMBRE_TABLA> WHERE <NOMBRE_CAMPO> <CONDICI�N>;
+SELECT * FROM <NOMBRE_TABLA> WHERE <CAMPO> LIKE '%$VARIABLE%'; (%, _, SE PUEDEN COMBINAR, ETC).
+DELETE FROM <NOMBRE_TABLA> WHERE <ID> = <VALOR>;
+UPDATE <NOMBRE_TABLA> SET <CAMPO> = <VALOR> WHERE <CAMPO> = <CRITERIO>; (más de un campo se separan con comas).
+$total_query = "SELECT SECCION, NOMBRE_ARTICULO, PAIS_ORIGEN, PRECIO FROM articulos WHERE SECCION = 'DEPORTES' LIMIT 0,3";
+LIMIT PRIMER PARÁMETRO = DESDE CUÁL REGISTRO SE VA A EMPEZAR (EMPIEZA DESDE EL 0 ), SEGUNDO PARÁMETRO = CUÁNTOS QUIERES VER (EMPIEZA DESDE EL 1).
+SELECT * FROM content ORDER BY DATE DESC
+/***************************************************************************************************************************/
+
+CAMPOS = columnas en una tabla.
+REGISTROS = filas en una tabla.
+
+Cada campo debe tener un nombre.
+Cada campo debe definir el tipo de dato que almacenar�.
+mysql -u root -p 
+
+Consultas de selecci�n = permiten capturar u obtener informaci�n sin modificar la informaci�n de la BBDD.
+Consultas de acci�n = modifican la informaci�n que se encuentra en la BBDD.
+
+/* Página de búsqueda */
+
+% => sustituye a una cadena de caracteres.
+_ => sustituye a un caracter.
+
+Si uno lo desea se puede combinar los dos simbolos de arriba para realizar consultas más específicas.
+
+mysqli_num_rows($result) = devuelve el número de filas.
+$result->num_rows = estamos accediendo al número de filas.
+$result en este caso sería el objeto que accede al atributo num_rows de la clase mysqli.
+
+$_GET
+$_SERVER["PHP_SELF"]; => indicamos que los datos los va a enviar a la misma página.
+
+&nbsp; = sirve en HTML para poner espacios en blanco y que el navegador los respete.
+
+mysqli_affected_rows(conexión); (insert, delete, update).
+
+/* 4 COMANDOS BÁSICOS BBDD*/
+
+1. Leer.
+2. Insertar.
+3. Eliminar.
+4. Actualizar.
+
+/* ¿Qué significa CRUD? */
+
+C = Create.
+R = Read.
+U = Update.
+D = Delete.
+
+/* Inyección SQL */
+Es un tipo de hackeo en base de datos. Altera la instrucción SQL.
+GUANTES' or '1' = '1 
+
+mysqli_real_escape_string($connection, string); 
+= Escapa los caracteres especiales de una cadena para usarla en una sentencia SQL, 
+tomando en cuenta el conjunto de caracteres actual de la conexión.
+
+mysqli_affected_rows($connection) = Devuelve el número de filas afectdas.
+
+/********************************CONSULTAS PREPARADAS*********************************/
+
+//Paso 1.
+Creamos la sentencia sql sustituyendo los valores de criterio por el simbolo ?
+sql="SELECT * FROM ARTICULOS WHERE PAIS_ORIGEN = ?"
+
+//Paso 2.
+Función que se usa para hacer consultas preparadas.
+Primer parámetro: objeto conexión.
+Segundo parámetro: consulta sql.
+$result = mysqli_prepare($connection, $query); = La función devuelve objeto de tipo  mysqli_stmt.
+
+//Paso 3.
+Unimos los parámetros a la sentencia sql. De esto se encarga la función mysqli_stmt_bind_param().
+Devuelve true o false.
+Esta función requiere tres parámetros:
+Primer parámetro: el objeto mysqli_stmt(devuelto por mysqli_prepare).
+Segundo parámetro: el tipo de dato que se utilizará como criterio en sql.
+Tercer parámetro: variable con criterio.
+
+//Paso 4.
+Ejecutar la consulta con la función mysqli_stmt_execute(). Esta función devuelve true o false.
+Necesita como parámetro el objeto mysqli_stmt.
+
+//Paso 5.
+Asociar variables al resultado de la consulta. Esto lo conseguimos con la función
+mysqli_stmt_bind_result(). Devuelve true o false.
+Necesita como parámetros el objeto mysqli_stmt y tantas variables como columnas en 
+la consulta sql.
+
+//Paso 6.
+Lectura de valores. Para ello utilizaremos la función mysqli_stmt_fetch.
+Pide como parámetro el objeto mysqli_stmt.
+Especificación del tipo de caracteres 
+
+mysqli_stmt_bind_param($resultado objeto stmt,"carácter",$variable que se unirá a la consulta);
+
+              Carácter Descripción
+
+i la variable correspondiente es de tipo entero.
+d la variable correspondiente es de tipo double.
+s la variable correspondiente es de tipo string.
+b la variable correspondiente es un blob y se envía en paquetes.
+ 
+
+
+/***********************************************************************************/
+
+/*********************************PDO**********************************************/
+¿Qué es PDO?
+P = PHP.
+D = Data.
+O = Object.
+
+Librería PDO. Capa de abstracción.
+PDO es orientado a objetos (POO).
+
+bindParam = usarlo con parámetros.
+bindValue = usarlo con marcadores.
+
+
+/**************************************************************************************/
+
+/******************************************COOKIE***************************************/
+
+Crear una cookie = setcookie("clave de la cookie", "valor de la cookie");
+Leer cookie = $_COOKIE["clave de la cookie"];
+Las cookies tienen un tiempo de vida, nosotros lo debemos especificar.
+Si no se especifica el tiempo de vida de la cookie, se pierde al cerrar el navegador.
+
+Parámetros de una cookie
+1. Clave de la cookie.
+2. Valor de la cookie.
+3. Vigencia (duración en segundos con la función time() + (segundos), opcional).
+4. Directorio de actuación (url donde se podrá acceder a la cookie, como alguna carpeta en específico, opcional).
+
+60*60*24*30 = 1 mes en segundos.
+
+Eliminación de cookie = Es poner time() -1.
+
+
+
+
+
+/****************************************************************************************/
+
+/************************************ENCRIPTAR CONTRASEÑAS*******************************/
+
+Encriptar contraseñas. Funciones hash.
+
+Encriptar = Aplicar un algoritmo de encriptación, que te da un código indecifrable.
+Código indecifrable = Se le denomina hash.
+
+Algoritmos en php (estos no son todos los algoritmos que hay en php).
+/*
+NOTA: Estos algoritmos no se recomienda mucho porque se pueden violar.
+* MD5 => md5(); 
+* SHA1 => sha1();
+* SHA 2
+* SHA 3
+* SHA256 => hash();
+*/
+
+//Este es el más seguro hasta el momento.
+* BLOWFISH => crypt(); || password_hash(); ||mcrypt();
+
+Parámetros de la función 
+password_hash($contraseña a cifrar, PASSWORD_DEFAULT, array("cost" => 12));
+
+password_verify($contraseña ingresada en el formulario, hash);
+Devuelve true or false.
+True = Si las dos contraseñas son iguales.
+False = Si no son iguales las contraseñas.
+
+/****************************************************************************************/
+
+/***********************************CRUD************************************************/
+
+CRUD
+C = Create.
+R = Read.
+U = Update.
+D = Delete.
+
+¿Cómo pasar parámetros por un <a href> </a>?
+Se tiene que pasar por la URL con el método $_GET.
+No se puede pasar por el $_POST.
+
+
+
+/****************************************************************************************/
+
+/***********************************PAGINACIÓN******************************************/
+
+/**************************************************************************************/
+
+
+/******************************************MVC******************************************/
+
+¿Qué es Modelo Vista Controlador?
+
+Patrón de diseño de aplicaciones que separa la lógica del programa de la interfaz 
+de usuario.
+
+¿Qué ventajas tiene utilizar este patrón de diseño?
+
+* Más funcional.
+* Fácil de mantener (Modularización).
+* Más escalable (Se puede mejorar el programa).
+
+¿Cómo separar la lógica de la interfaz?
+
+Dividiendo la aplicación en tres partes o "capas".
+* Model (El modelo): Aquí van las clases y métodos que comunican con la BDDD.
+* View (La vista): Aquí va todo lo referente a la interfaz que mostrará la información del usuario.
+* Controller (El controlador): Intermediario entre la vista y el modelo.
+
+
+/**************************************************************************************/
+
+/************************************SUBIR IMÁGENES***********************************/
+
+Crearemos un formulario donde se podrá subir la imágen. El método a usar siempre
+debe de ser POST.
+
+Campos Blob se dividen en: TinyBlob, MediumBlob, Blob y LongBlob.
+
+* Binary.
+* Large.
+* Object.
+
+Almacenando archivos Blob.
+
+archivo_objetivo = fopen(ruta, permiso);
+contenido_bytes_archivo = fread(archivo_objetivo, tamaño);
+
+¿Cómo leer archivos Blob?
+
+Se utiliza la codificación base64.
+En php tenemos la función base64_encode(contenido).
+Se debe de usar SET NAME UTF8.
+
+
+
+
+/*************************************************************************************/
+
+/*********************CREACIÓN DE UN BLOG********************************************/
+
+Características en común de un blog:
+
+* Título.
+* Descripción/comentario.
+* Fecha.
+* Imagen.
+
+Para usar un placeholder en un textarea debemos de tener cuidado porque
+no se pueden dejar espacios entre las etiquetas de apertura y de cierre.
+<textarea placeholder="texto"></textarea> -> Correcto.
+
+Al subir imágenes recordar que en el formulario debemos agregar enctype="multipart/form-data".
+
+/***********************************************************************************/

@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    background: #42A5F5;
+    max-width: 20%;
+    border-radius: 10px;
+    margin: auto;
+    color: #64FFDA;
+}
+
+table {
+    margin: auto;
+    margin-top: 15px;
+    border: 2px solid #FF6D00;
+    background: #F5F5F5;
+    padding: 20px;
+}
+
+.right {
+    text-align: center;
+    
+}

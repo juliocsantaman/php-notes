@@ -1,0 +1,12 @@
+table {
+    width: 300px;
+    margin: auto;
+    border: 2px solid rgb(59, 86, 206);
+    padding: 5px;
+    background-color: rgb(171, 213, 226);
+}
+
+td {
+    text-align: center;
+}
+

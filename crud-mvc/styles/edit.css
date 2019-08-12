@@ -1,0 +1,24 @@
+h1 {
+    background: #000;
+    color: #fff;
+    max-width: 17%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+
+body {
+    background: rgb(173, 205, 206);
+}
+
+table {
+    border: 1px solid #000;
+    margin: auto;
+}
+
+td {
+    border: 1px solid #000;
+    color: #222222;
+    text-align: center;    
+}
